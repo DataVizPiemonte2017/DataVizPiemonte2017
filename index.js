@@ -104,7 +104,7 @@ function updateMap900 (city_leaflet) {
 					.addTo(map);
 }
 
-var xv = '#ffffe5';
+var xv = '#ffec26';
 var xvi = '#FF7F00';
 var xvii = '#E41A1C';
 var xviii = '#984EA3';
