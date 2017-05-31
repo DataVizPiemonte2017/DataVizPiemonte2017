@@ -65,8 +65,8 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Autori
 
-* **Federico Piovesan** - *Initial work* -
-* **Maria Claudia Bodino** - *Initial work* - https://github.com/mariaclaudia
+* **Federico Piovesan** 
+* [**Maria Claudia Bodino**] (https://github.com/mariaclaudia)
 
 
 ## Licenza
@@ -75,4 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Ringraziamenti
 
-Un ringraziamento a **[Napo]**(https://twitter.com/napo) per i consigli e le dritte su OSM e dintorni.
+Un ringraziamento a [Napo](https://twitter.com/napo) per i consigli e le dritte su OSM e dintorni.
