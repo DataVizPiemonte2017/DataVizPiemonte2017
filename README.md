@@ -1,6 +1,6 @@
 # Il 900 in Piemonte: una strada alla volta
 
-Spesso si percorrono vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine di storia italiana e piemontese. 
+Spesso ogni giorno percorriamo vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine importanti di storia italiana e piemontese. 
 
 Il nostro progetto è nato con l'intento di diventare uno **strumento didattico**: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre città. 
 
