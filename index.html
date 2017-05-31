@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Il Novecento in Piemonte - Una strada alla volta</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+
+   <!-- Jascript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Leaflet -->
+  <script src="lib/leaflet/leaflet.js"></script>
+  <script src="lib/leaflet/leaflet.ajax.min.js"></script>
+
+  <!-- D3.js -->
+  <script src="lib/d3/d3.min.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div id="map"></div>
+
+
+  <div class="row" id="header">
+        <h1>Il Novecento in Piemonte</h1>
+        <h2>Una strada alla volta</h2>
+  </div>
+
+
+  <button id="aboutBtn">Di cosa di tratta</button>
+  <div id='timeFilter'>
+    <form action="">
+      <input id="allTime" type="radio" name="filter" checked>Tutte le epoche</input></br>
+      <input id="only900" type="radio" name="filter">Solo Novecento</input>
+    </form>
+  </div>
+
+
+  <div class="row" id="city_select">
+      <button><a href="#" id="menu-Alessandria">Alessandria</a></button>
+    <button><a href="#" id="menu-Asti">Asti</a></button>
+    <button><a href="#" id="menu-Biella">Biella</a></button>
+    <button><a href="#" id="menu-Cuneo">Cuneo</a></button>
+    <button><a href="#" id="menu-Novara">Novara</a></button>
+    <button><a href="#" id="menu-Torino">Torino</a></button>
+    <button><a href="#" id="menu-Verbania">Verbania</a></button>
+    <button><a href="#" id="menu-Vercelli">Vercelli</a></button>
+  </div>
+
+
+  <div  id="timeline"></div>
+
+
+  <div id="info-box">
+          <p id="ib-title"><span>Click on a street to find more information.</span></p>
+          <img style="display: none;" />
+          <p><span id="mini_bio" style="display: none;"></span></p>
+          <p><span id="wiki_link" style="display: none;"></span></p>
+          
+  </div>
+
+  <div id="reset">reset</div>
+
+
+  <div id="aboutText">
+    <h1>Il Novecento in Piemonte</h1>
+    <h2>Una strada alla volta</h2>
+    <p>Spesso si percorrono vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine di storia italiana e piemontese. Il nostro progetto è nato con l'intento di diventare uno strumento didattico: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre province.</p>
+  	<div id="closeAbout">Chiudi</div>
+  </div>
+
+  
+  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="js/flying.js"></script>
+  <script type="text/javascript" src="js/interactions.js"></script>
+  <script type="text/javascript" src="js/timeline.js"></script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
