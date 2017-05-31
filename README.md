@@ -75,4 +75,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Ringraziamenti
 
-Un ringraziamento a Napo (https://twitter.com/napo) per i consigli e le dritte su OSM e dintorni.
+Un ringraziamento a **[Napo]**(https://twitter.com/napo) per i consigli e le dritte su OSM e dintorni.
