@@ -40,6 +40,8 @@ Grazie alla libreria Scrapy abbiamo abbinato ai dati geografici delle vie le inf
 
 Il risultato finale della pipeline è un file GEOJSON per capoluogo di provincia contenente tutti gli id abbinati ad una via/piazza/ il cui nome è presente in Wikipedia. 
 
+Nella cartella DATA sono contenuti anche i dataseto GeoJson originali prodotti da OSM.
+
 ### Statistiche
 **Alessandria**: 746 vie di cui 522 entità individuabili su wikipedia.
 
@@ -84,7 +86,7 @@ Per informazioni piu' dettagliate e per mettervi in contatto con noi potete visi
 
 ## Autori
 
-* **Federico Piovesan** 
+* **Federico Piovesan** (https://github.com/federicopvs)
 * **Maria Claudia Bodino** (https://github.com/mariaclaudia)
 
 
