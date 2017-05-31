@@ -123,7 +123,6 @@ function colorHuman (feature) {
 
 	if (mapLayer) { mapLayer.remove(); }
 
-	// if (filtered==1) {
 	    if (type == 'human') {
 			if (yd >= 1970) { return {color: xx_late, opacity: street_opacity, weight: street_weight}; }
 			else if (yd < 1970 && yd >= 1950) {return {color: xx_early, opacity: street_opacity, weight: street_weight}; }
@@ -139,19 +138,21 @@ function colorHuman (feature) {
 
 
 function colorHuman900 (feature) {
-	var street_opacity = 0.5;
+	var street_opacity = 1;
 	var street_weight = 3;
 
 	var type = feature.properties.instance_type;
 	var yd = feature.properties.yd;
-    if (type == 'human' && yd < 1900) { 
+
+    if (type == 'human' ) { 
     	if (yd >= 1970) { return {color: xx_late, opacity: street_opacity, weight: street_weight}; }
 		else if (yd < 1970 && yd >= 1950) {return {color: xx_early, opacity: street_opacity, weight: street_weight}; }
-		else if (yd < 1950 && yd >= 1890) {return {color: xix_late, opacity: street_opacity, weight: street_weight}; 
+		else if (yd < 1950 && yd >= 1890) {return {color: xix_late, opacity: street_opacity, weight: street_weight}; }
+		else if (yd < 1890) {return {color: xix_late, opacity: 0, weight: 0}; }
 	} else if (type == 'determinator for date of periodic occurrence') {
-		return {color : 'black', opacity: street_opacity, weight: street_weight};
-		}
-}}
+		return {color : 'black', opacity: street_opacity, weight: street_weight}; }
+
+}
 
 // Cycle through the streets and bind events to different interactions
 function onEachFeature (feature, layer) {
