@@ -243,11 +243,16 @@ function aboutBtn () {
 			.style('left', pageWidth/2 + 'px')
 			.style('transform', 'translate(-50%,-50%)')
 			.style('display', 'inline')
+
+		d3.selectAll('button')
+			.style('pointer-events', 'none');
 	})
 
 	d3.select('#closeAbout').on('click', function() {
 		d3.select('#aboutBack').remove();
 		d3.select('#aboutText').style('display', 'none');
+		d3.selectAll('button')
+			.style('pointer-events', 'all');
 	})
 }
 

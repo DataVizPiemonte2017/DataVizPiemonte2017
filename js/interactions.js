@@ -13,11 +13,23 @@ function msover () {
 	//d3.select(this._path).attr("stroke-opacity", 1);
 	d3.select(this._path).attr("stroke-width", 6);
 
+	
+
 	var obj = d3.select(this);
 	var obj = obj._groups[0][0];
 
+	var name = obj.feature.properties.wn;
 	var dob = obj.feature.properties.yb;
 	var dod = obj.feature.properties.yd;
+	var color = obj._path.attributes.stroke.nodeValue;
+
+
+	d3.select('#mouseoverName')
+			.style('display', 'inline')
+			.style('background-color', color);
+
+	d3.select('#mouseoverText')
+		.text(name + ' (' + dob + ', ' + dod + ')');
 
 	data_periodi.forEach(function (period) {
 		if (dob != null && dod != null) {
@@ -79,6 +91,9 @@ function msout () {
 	// Restore style
 	//d3.select(this._path).attr("stroke-opacity", 0.5);
 	d3.select(this._path).attr("stroke-width", 3);
+
+	d3.select('#mouseoverName')
+			.style('display', 'none');
 
 	d3.selectAll('.focus')
 		.remove();

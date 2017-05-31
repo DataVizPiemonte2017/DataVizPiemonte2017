@@ -106,19 +106,21 @@ function generateTimeline() {
 
 		d3.select(this).style('opacity', 1);
 
-		d3.select('#timeSvg')
-		.append('text')
-		.attr('id', 'period_name')
-		.attr('x', range_width/2)
-		.attr('y', name_y)
-		.text(d.name + ' (' + d.start + '-' + d.end + ')');
+		d3.select('#mouseoverName')
+			.style('display', 'inline')
+			.style('background-color', d.color);
+
+		d3.select('#mouseoverText')
+			.text(d.name + ' (' + d.start + '-' + d.end + ')');
+
 		})
 
 	rects.on('mouseout', function (d) {
 		d3.select(this).style('opacity', opacity);
 
-		d3.select('#period_name')
-		.remove();
+		d3.select('#mouseoverName')
+			.style('display', 'none');
+
 		})
 
 	d3.select('#timeFilter').attr('disabled', null)
