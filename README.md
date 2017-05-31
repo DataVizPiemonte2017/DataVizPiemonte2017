@@ -1,20 +1,38 @@
 # Il 900 in Piemonte: una strada alla volta
 
-Spesso si percorrono vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine di storia italiana e piemontese. Il nostro progetto è nato con l'intento di diventare uno **strumento didattico**: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre città. In particolare modo abbiamo voluto dare risalto alle donne e agli uomini che hanno vissuto nel '900.
-Fin dall'inizio non ci aspettavamo che tutte le vie sarebbero state identificate o che la persona giusta venisse assegnata ad ogni strada. Consapevoli dei limiti del nostro approccio, e curiosi di vederne il risultato, la nostra priorità era usare dati aperti (le informazioni geografiche di OpenStreetMap e quelle biografiche di Wikipedia e Wikidata) per creare uno stradario tanto imperfetto quanto facilmente riproducibile. Potendo continuare ci piacerebbe renderlo piu' interattivo, permettendo agli utenti di fornire dei feedback sugli abbinamenti via-persona [[siamo abbastanza sicuri che la via Fossati di Y non si riferisca a Ivano Fossati bensì al cardinale Cardinale Maria Fossati]] e aggiungere delle informazioni sugli eventi storici (evidenziati in nero per mancanza di dati strutturati sugli anni).
-Per informazioni piu' dettagliate e per mettervi in contatto con noi potete visitare il repository di Github.
+https://datavizpiemonte2017.github.io/Strade900Piemonte/
 
-In questo progetto sono stati utlizzati unicamente software opensource (python, IPython notebook, ) e dati aperti (OSM, Wikipedia)
+Spesso ogni giorno percorriamo vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine importanti di storia italiana e piemontese. 
+
+Il nostro progetto è nato con l'intento di diventare uno **strumento didattico**: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre città. 
+
+In particolare modo abbiamo voluto dare risalto alle donne e agli uomini che hanno vissuto nel '900 ma allo stesso tempo abbiamo deciso di mantere tutti le personalità che hanno vissuto nei secoli precedenti.
+
+Sulla mappa sono possibili due tipi di visualizzazioni: 
+
+* le strade dedicate unicamente a personaggi significativi per il '900 
+* le strade dedicate a tutte le persone vissute nei secoli precedenti
+
+
+Per la suddivisione abbiamo usato quella suggerita da [Storia d'Italia di Montanelli] (https://it.wikipedia.org/wiki/Storia_d%27Italia_(Montanelli))
+
+Fin dall'inizio non ci aspettavamo che tutte le vie sarebbero state identificate o che la persona giusta venisse assegnata ad ogni strada. Consapevoli dei limiti del nostro approccio, e curiosi di vederne il risultato, la nostra priorità era usare dati aperti (le informazioni geografiche di OpenStreetMap e quelle biografiche di Wikipedia e Wikidata) per creare uno stradario tanto imperfetto quanto facilmente riproducibile. Potendo continuare ci piacerebbe renderlo piu' interattivo, permettendo agli utenti di fornire dei feedback sugli abbinamenti via-persona (siamo abbastanza sicuri che la via Fossati di Torino non si riferisca a Ivano Fossati bensì al cardinale Cardinale Maria Fossati) e aggiungere delle informazioni sugli eventi storici (evidenziati in nero per mancanza di dati strutturati sugli anni).
+
+In questo progetto sono stati utlizzati unicamente software opensource e dati aperti.
 
 ## Data Pipeline
 
 Si è deciso di limitare l'analisi alle città capoluogo del Piemonte.
+
 Per la realizzazione della Pipeline è stato usato python tramite iPython notebook.
+
 Inizialmente per creare una data pipeline completamente dinamcia si è utilizzato Overpass API per interrogare Open Street Map
 Successivamente abbiamo deciso di utilizzare gli estratti messi a disposizione dalla comunità OSM. http://osm-estratti.wmflabs.org/estratti/
 Per convertire gli estratti in file geoJson è stato utilizzato il tool ogr2ogr che converte da formato shp in geojson
 Una via può essere composta da più id e quindi necessario crearsi una tabella di lookup tra Nome via  e ID che compongono la via
+
 Per ogni città abbiamo ripulito i nomi della strade utilizzando dei token (es.Via, Piazza, Corso...) individuati tramite un'analisi fatta su tutti i nomi delle strade dei capoluoghi.
+
 Per ogni nome via ci siamo affidati al motore di ricerca Google per capire per capire se si trattatva di qualcosa/qualcuno di significativo. Se tra i primi 5 risultati restituiti dalla chiamata a Google c'è un risultato di WIKIPEDIA questo ci sembrava sufficientemente 
 
 Inizialmente abbiamo utilizzato WikiData tramite delle Query SPARQL, poi abbiamo preferito l'uso di Scrapy direttamente nella pagina Wikipedia accessible tramite l'URL restituita precedentemente.
@@ -61,7 +79,8 @@ L'URL corretta sarebbe: https://it.wikipedia.org/wiki/Festa_della_Repubblica_Ita
 
 ## Vuoi contribuire
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Per informazioni piu' dettagliate e per mettervi in contatto con noi potete visitare il repository di Github.
+
 
 ## Autori
 
