@@ -1,0 +1,24 @@
+name,start,end,color
+L'Italia dei secoli bui,0,1000,white'
+L'Italia dei Comuni,1000,1250,#ffffe5
+L'Italia dei secoli d'oro,1250,1492,#fec44f
+L'Italia della Controriforma,1492,1600,#fd8d3c
+L'Italia del Seicento,1600,1700,#cb181d
+L'Italia del Settecento,1700,1789,#54278f
+L'Italia giacobina e carbonara,1789,1831,#08306b
+L'Italia del Risorgimento,1831,1861,#08519c
+L'Italia dei Notabili,1861,1900,#2171b5
+L'Italia di Giolitti,1900,1920,#4292c6
+L'Italia in camicia nera,1920,1925,#6baed6
+L'Italia littoria,1925,1936,#9ecae1
+L'Italia dell'Asse,1936,1940,#c6dbef
+L'Italia della disfatta,1940,1943,#deebf7
+L'Italia della guerra civile,1943,1946,#e5f5e0
+L'Italia della Repubblica,1946,1948,#c7e9c0
+L'Italia del miracolo,1948,1954,#a1d99b
+L'Italia dei due Giovanni,1954,1965,#74c476
+L'Italia degli anni di piombo,1965,1978,#41ab5d
+L'Italia degli anni di fango,1978,1993,#238b45
+L'Italia di Berlusconi,1993,1995,#006d2c
+L'Italia dell'Ulivo,1995,1997,#00441b
+Ultimi vent'anni,1997,2017,#214400
