@@ -1,15 +1,16 @@
 # Il 900 in Piemonte: una strada alla volta
 
 Spesso si percorrono vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine di storia italiana e piemontese. Il nostro progetto è nato con l'intento di diventare uno strumento didattico: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre città.
-Fin dall'inizio non ci aspettavamo che tutte le vie sarebbero state identificate o che la persona giusta venisse assegnata ad ogni strada. Consapevoli dei limiti del nostro approccio, e curiosi di vederne il risultato, la nostra priorità era usare dati aperti (le informazioni geografiche di OpenStreetMap e quelle biografiche di Wikipedia e Wikidata) per creare uno stradario tanto imperfetto quanto facilmente riproducibile. Potendo continuare ci piacerebbe renderlo piu' interattivo, permettendo agli utenti di fornire dei feedback sugli abbinamenti via-persona [[siamo abbastanza sicuri che la via X di Y non si riferisca a Z]] e aggiungere delle informazioni sugli eventi storici (evidenziati in nero per mancanza di dati strutturati sugli anni).
+Fin dall'inizio non ci aspettavamo che tutte le vie sarebbero state identificate o che la persona giusta venisse assegnata ad ogni strada. Consapevoli dei limiti del nostro approccio, e curiosi di vederne il risultato, la nostra priorità era usare dati aperti (le informazioni geografiche di OpenStreetMap e quelle biografiche di Wikipedia e Wikidata) per creare uno stradario tanto imperfetto quanto facilmente riproducibile. Potendo continuare ci piacerebbe renderlo piu' interattivo, permettendo agli utenti di fornire dei feedback sugli abbinamenti via-persona [[siamo abbastanza sicuri che la via Fossati di Y non si riferisca a Ivano Fossati bensì al cardinale Cardinale Maria Fossati]] e aggiungere delle informazioni sugli eventi storici (evidenziati in nero per mancanza di dati strutturati sugli anni).
 Per informazioni piu' dettagliate e per mettervi in contatto con noi potete visitare il repository di Github.
 
 
 ## Data Pipeline
 
-Per la realizzazione della Pipeline è stato usato iPython notebook.
+Per la realizzazione della Pipeline è stato usato python tramite iPython notebook.
 Inizialmente per creare una data pipeline completamente dinamcia si è utilizzato Overpass API per interrogare Open Street Map
-
+Successivamente abbiamo deciso di utilizzare gli estratti di Open Street Map. http://osm-estratti.wmflabs.org/estratti/
+Per convertire gli estratti in file geoJson è stato utilizzato il tool ogr2ogr che converte da formato shp in geojson
 Per ogni capoluogo provincia abbiamo scaricato gli stradari messi a disposizione dalla comunità OSM
 convertiti in geoJson con aaa2sss.
 
@@ -65,8 +66,8 @@ Explain how to run the automated tests for this system
 * [D3](https://d3js.org) - D3 is a JavaScript library for visualizing data with HTML, SVG, and CSS.
 * [Github pages](https://pages.github.com/) - Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.
 * [Google API](https://github.com/MarioVilas/google)
-* [Scrapy]
-
+* [Scrapy](https://scrapy.org/) - An open source and collaborative framework for extracting the data you need from websites. In a fast, simple, yet extensible way.
+* [ogr2ogr](http://www.gdal.org/ogr2ogr.html) From SHP ti GeoJson file
 
 ## Vuoi contribuire
 
@@ -74,8 +75,8 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Autori
 
-* **Federico Piovesan** - *Initial work* - [PurpleBooth](https://github.com/mariaclaudia)
-* **Maria Claudia Bodino** - *Initial work* - [PurpleBooth](https://github.com/mariaclaudia)
+* **Federico Piovesan** - *Initial work* -
+* **Maria Claudia Bodino** - *Initial work* - https://github.com/mariaclaudia
 
 
 ## Licenza
@@ -84,4 +85,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Ringraziamenti
 
-Un ringraziamento a Napo() per i consigli e le dritte su OSM e dintorni,
+Un ringraziamento a Napo (https://twitter.com/napo) per i consigli e le dritte su OSM e dintorni.
