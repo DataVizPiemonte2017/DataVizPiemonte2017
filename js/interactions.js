@@ -10,7 +10,7 @@ var name_y = 50;
 function msover () {
 
 	// Change style
-	d3.select(this._path).attr("stroke-opacity", 1);
+	//d3.select(this._path).attr("stroke-opacity", 1);
 	d3.select(this._path).attr("stroke-width", 6);
 
 	var obj = d3.select(this);
@@ -77,8 +77,8 @@ function msover () {
 
 function msout () {
 	// Restore style
-	d3.select(this._path).attr("stroke-opacity", 0.5);
-	d3.select(this._path).attr("stroke-width", 2);
+	//d3.select(this._path).attr("stroke-opacity", 0.5);
+	d3.select(this._path).attr("stroke-width", 3);
 
 	d3.selectAll('.focus')
 		.remove();

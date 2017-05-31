@@ -113,10 +113,11 @@ var xix_late = '#6baed6';
 var xx_early = '#74c476';
 var xx_late = '#238b45';
 
+
 function colorHuman (feature) {
-	console.log('colorHuman executed');
-	var street_opacity = 0.5;
+	var street_opacity = 1;
 	var street_weight = 3;
+
 	var type = feature.properties.instance_type;
 	var yd = feature.properties.yd;
 
@@ -134,27 +135,23 @@ function colorHuman (feature) {
 			else if (yd < 1500) {return {color: xv, opacity: street_opacity, weight: street_weight}; }
 		} else if (type == 'determinator for date of periodic occurrence') {
 			return {color : 'black', opacity: street_opacity, weight: street_weight}; }
-	// } else if (filtered==0) {
-	// 	if (type == 'human') {
-	// 		if (yd >= 1900) { return {color: xx, opacity: street_opacity, weight: street_weight}; }
-	// 	} else if (type == 'determinator for date of periodic occurrence') {
-	// 			return {color : 'black', opacity: street_opacity, weight: street_weight};
-	// 	}
-	// }
 }
 
 
 function colorHuman900 (feature) {
+	var street_opacity = 0.5;
+	var street_weight = 3;
+
 	var type = feature.properties.instance_type;
 	var yd = feature.properties.yd;
     if (type == 'human' && yd < 1900) { 
-    	if (yd >= 1950) { return {color: xx_late, opacity: street_opacity, weight: street_weight}; }
-		else if (yd < 1950 && yd >= 1900) {return {color: xx_early, opacity: street_opacity, weight: street_weight}; }
+    	if (yd >= 1970) { return {color: xx_late, opacity: street_opacity, weight: street_weight}; }
+		else if (yd < 1970 && yd >= 1950) {return {color: xx_early, opacity: street_opacity, weight: street_weight}; }
+		else if (yd < 1950 && yd >= 1890) {return {color: xix_late, opacity: street_opacity, weight: street_weight}; 
 	} else if (type == 'determinator for date of periodic occurrence') {
-		return {color : 'black', opacity: 0.5, weight: 3};
-	} else { 
-		return {color: 'grey', opacity: 0, weight: 0}; }
-}
+		return {color : 'black', opacity: street_opacity, weight: street_weight};
+		}
+}}
 
 // Cycle through the streets and bind events to different interactions
 function onEachFeature (feature, layer) {
@@ -189,14 +186,14 @@ function welcomeRect () {
                 .attr('y', 0)
                 .attr('width', map.getSize().x)
                 .attr('height', map.getSize().y)
-                .attr('fill', 'grey')
+                .attr('fill', 'rgba(0,0,0,0.75)')
                 .style('opacity', 0.5)
 
     welcomeRect.append('text')
     			.attr('x', map.latLngToLayerPoint(piemonte_coord).x)
     			.attr('y', map.latLngToLayerPoint(piemonte_coord).y)
     			.attr('id', 'welcomeText')
-    			.text('Seleziona una citta dal menu a destra per cominciare')
+    			.text('Seleziona una città per cominciare. Poi clicca su una strada per maggiori informazioni.')
 
     map.dragging.disable();
     map.zoomControl.disable();
@@ -204,28 +201,6 @@ function welcomeRect () {
     map.scrollWheelZoom.disable();
     map.touchZoom.disable();
 
-}
-
-
-function aboutBtn () {
-	var divHeight = d3.select('#header').select('h1').node().getBoundingClientRect().height;
-	var button = d3.select('#aboutBtn');
-	var pageWidth = d3.select('body').node().getBoundingClientRect().width;
-	var pageHeight = d3.select('body').node().getBoundingClientRect().height;
-
-	button
-		.style('transform', 'translateY(' + divHeight/2 + 'px)')
-		.style('transform', 'translateY(50%)')
-
-	button.on('click', function () {
-		d3.select('#aboutText')
-			// .style('transform', 'translateY(' + pageHeight/2 + 'px)')
-			// .style('transform', 'translateX(' + pageWidth/2 + 'px)')
-			.style('top', pageHeight/2 + 'px')
-			.style('left', pageWidth/2 + 'px')
-			.style('transform', 'translate(-50%,-50%)')
-			.style('display', 'inline')
-	})
 }
 
 function removeWelcome () {
@@ -240,3 +215,39 @@ function removeWelcome () {
     	map.touchZoom.enable();
 	}
 }
+
+
+function aboutBtn () {
+	var divHeight = d3.select('#header').select('h1').node().getBoundingClientRect().height;
+	var button = d3.select('#aboutBtn');
+	var pageWidth = d3.select('body').node().getBoundingClientRect().width;
+	var pageHeight = d3.select('body').node().getBoundingClientRect().height;
+
+	button
+		.style('transform', 'translateY(' + divHeight/2 + 'px)')
+		.style('transform', 'translateY(50%)')
+
+	button.on('click', function () {
+		d3.select('body')
+			.append('svg')
+			.attr('id', 'aboutBack')
+			.attr('width', '100%')
+			.attr('height', '100%')
+			.append('rect')
+				.attr('width', '100%')
+				.attr('height', '100%')
+				.style('fill', 'rgba(0,0,0,0.75)')
+
+		d3.select('#aboutText')
+			.style('top', pageHeight/2 + 'px')
+			.style('left', pageWidth/2 + 'px')
+			.style('transform', 'translate(-50%,-50%)')
+			.style('display', 'inline')
+	})
+
+	d3.select('#closeAbout').on('click', function() {
+		d3.select('#aboutBack').remove();
+		d3.select('#aboutText').style('display', 'none');
+	})
+}
+

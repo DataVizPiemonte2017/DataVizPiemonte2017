@@ -53,6 +53,7 @@
 
 
   <button id="aboutBtn">Di cosa di tratta</button>
+
   <div id='timeFilter'>
     <form action="">
       <input id="allTime" type="radio" name="filter" checked>Tutte le epoche</input></br>
@@ -61,7 +62,7 @@
   </div>
 
 
-  <div class="row" id="city_select">
+  <div class="row" id="city_select" class="border">
       <button><a href="#" id="menu-Alessandria">Alessandria</a></button>
     <button><a href="#" id="menu-Asti">Asti</a></button>
     <button><a href="#" id="menu-Biella">Biella</a></button>
@@ -76,21 +77,20 @@
   <div  id="timeline"></div>
 
 
-  <div id="info-box">
-          <p id="ib-title"><span>Click on a street to find more information.</span></p>
+  <div id="info-box" class="border">
+          <p id="ib-title"></p>
           <img style="display: none;" />
           <p><span id="mini_bio" style="display: none;"></span></p>
           <p><span id="wiki_link" style="display: none;"></span></p>
           
   </div>
 
-  <div id="reset">reset</div>
 
 
   <div id="aboutText">
-    <h1>Il Novecento in Piemonte</h1>
-    <h2>Una strada alla volta</h2>
-    <p>Spesso si percorrono vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine di storia italiana e piemontese. Il nostro progetto è nato con l'intento di diventare uno strumento didattico: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre province.</p>
+    <p>Spesso si percorrono vie attribuite a persone di cui non sappiamo nulla ma che sicuramente hanno scritto pagine di storia italiana e piemontese. Il nostro progetto è nato con l'intento di diventare uno strumento didattico: abbiamo scelto i capoluoghi di provinca del Piemonte e tramite strumenti open source e data set pubblici abbiamo cercato di dare un volto alle persone ed eventi a cui sono intestate le vie delle nostre città.</p>
+    <p>Fin dall'inizio non ci aspettavamo che tutte le vie sarebbero state identificate o che la persona giusta venisse assegnata ad ogni strada. Consapevoli dei limiti del nostro approccio, e curiosi di vederne il risultato, la nostra priorità era usare dati aperti (le informazioni geografiche di OpenStreetMap e quelle biografiche di Wikipedia e Wikidata) per creare uno stradario tanto imperfetto quanto facilmente riproducibile. Potendo continuare ci piacerebbe renderlo piu' interattivo, permettendo agli utenti di fornire dei feedback sugli abbinamenti via-persona [[siamo abbastanza sicuri che la via X di Y non si riferisca a Z]] e aggiungere delle informazioni sugli eventi storici (evidenziati in nero per mancanza di dati strutturati sugli anni).
+    Per informazioni piu' dettagliate e per mettervi in contatto con noi potete visitare <a href="https://github.com/DataVizPiemonte2017/Strade900Piemonte">il repository di Github.</a></p>
   	<div id="closeAbout">Chiudi</div>
   </div>
 
