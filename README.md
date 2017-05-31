@@ -92,7 +92,7 @@ Per informazioni piu' dettagliate e per mettervi in contatto con noi potete visi
 
 ## Licenza
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Creative Commons Attribuzione e Condivisione allo stesso modo (CC:BY-SA)
 
 ## Ringraziamenti
 
