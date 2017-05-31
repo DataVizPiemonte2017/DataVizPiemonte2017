@@ -23,14 +23,22 @@ Grazie alla libreria Scrapy abbiamo abbinato ai dati geografici delle vie le inf
 Il risultato finale della pipeline è un file GEOJSON per capoluogo di provincia contenente tutti gli id abbinati ad una via/piazza/ il cui nome è presente in Wikipedia. 
 
 ### Statistiche
-**Alessandria**: 746 vie di cui 522 entità individuabili su wikipedia
+**Alessandria**: 746 vie di cui 522 entità individuabili su wikipedia.
+
 **Asti**: 522 vie di cui 483 entità individuabili su wikipedia
+
 **Biella**: 527 331 entità individuabili su wikipedia
+
 **Cuneo**: 412 di cui 289 entità individuabili su wikipedia
+
 **Novara**: 840 716 entità individuabili su wikipedia
+
 **Torino**: 3999 vie di cui 2815 individuabili su wikipedia
+
 **Verbania**: 414 vie di cui 226 individuabili su wikipedia
+
 **Vercelli**: 552 vie di cui 489 individuabili su wikipedia
+
 
 Per via si intendono anche piazze, viali, corsi...
 
