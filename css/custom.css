@@ -22,8 +22,8 @@ a {
     text-decoration: none !important;
 }
 
-a:hover {
-    color: black !important;
+a:active, a:hover {
+    color: '#875900' !important;
     font-weight: bold !important;
     text-decoration: underline !important;
 }
@@ -61,7 +61,7 @@ div {
 
 #city_select button {
 	z-index: 999999;
-    background-color: rgba(169,169,169,0.2);
+    background-color: rgba(169,169,169,0.7);
     border: 1px solid;
     border-right: 2px solid;
     border-bottom: 4px solid;
@@ -109,7 +109,7 @@ div {
 	width: 20%;
     height: 55%;
     overflow: auto;
-    background-color: rgba(169,169,169,0.2)
+    background-color: rgba(169,169,169,0)
 }
 
 #info-box img {
@@ -159,7 +159,7 @@ rect {
     z-index: 9999;
     top: 2.5%;
     right: 2.5%;
-    background-color: rgba(169,169,169,0.2);
+    background-color: rgba(169,169,169,0.7);
     border: 1px solid;
     border-right: 2px solid;
     border-bottom: 4px solid;
@@ -224,7 +224,7 @@ rect {
 	line-height: 1.5em;
 	text-align: left;
 	display : none;
-    background-color: rgba(169,169,169,0.2);
+    background-color: rgba(169,169,169,0.7);
     padding: 5px;
 }
 

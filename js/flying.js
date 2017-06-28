@@ -53,6 +53,7 @@ city_coord_temp=city_coord;
 
 	map.flyTo(city_coord, zoom_city);
 	removeWelcome();
+
 }
 
 

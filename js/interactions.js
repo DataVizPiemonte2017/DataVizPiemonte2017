@@ -103,12 +103,13 @@ function msout () {
 function streetClick () {
 	var obj = d3.select(this);
 	var obj = obj._groups[0][0];
+	console.log(obj);
 
 	var name = obj.feature.properties.wn;
 	var img = obj.feature.properties.img;
 	
 	var mini_bio = obj.feature.properties.mini_bio; 
-	var wiki_link = obj.feature.properties.wiki_link; 
+	var wiki_link = obj.feature.properties.wu; 
 
 	var infoBox = d3.select('#info-box');
 	var reset = d3.select('#reset');
@@ -121,13 +122,14 @@ function streetClick () {
 		.transition()
 			.duration(500)
 			.style('transform', 'translateX(0)')
-	reset
-		.transition()
-			.duration(500)
-			.style('transform', 'translateX(' + windowWidth + 'px)')
-		.transition()
-			.duration(500)
-			.style('transform', 'translateX(0)')
+			.style('background-color', 'rgba(169,169,169,0.7)')
+	// reset
+	// 	.transition()
+	// 		.duration(500)
+	// 		.style('transform', 'translateX(' + windowWidth + 'px)')
+	// 	.transition()
+	// 		.duration(500)
+	// 		.style('transform', 'translateX(0)')
 
 	//Change content
 	setTimeout (function () {
@@ -147,7 +149,7 @@ function streetClick () {
 			.style('display', 'inline')
 			.style('overflow', 'auto')
 		infoBox.select('#wiki_link')
-			.html("<p>Per saperne di più: <a href='" + wiki_link + "'>Wikipedia.</a><p/>")
+			.html("<p>Per saperne di più: <a target='_blank' href='" + wiki_link + "'>Wikipedia.</a><p/>")
 			.style('display', 'inline')
 	}, 250)
 }

@@ -59,7 +59,7 @@ function generateTimeline() {
 	var periods = d3.select('#timeSvg').selectAll('g').data(data_periodi).enter().append('g');
 	var rects = periods.append('rect');
 	var labels = periods.append('text');
-	var opacity = 0.2;
+	var opacity = 0.4;
 
 	rects
 		.transition()
@@ -134,6 +134,7 @@ function updateTimeline () {
 	
 	var period_end = timeScale.domain()[1];
 	
+	var opacity = 0.4;
 
 	var periods = d3.select('#timeSvg').selectAll('g');
 	var rects = d3.select('#timeSvg').selectAll('rect');
@@ -147,7 +148,7 @@ function updateTimeline () {
 		.attr('width', function (d) {return timeScale(d.end) - timeScale(d.start);})
 		.attr('height', rects_height)
 		.attr('fill', function (d) {return d.color;})
-		.attr('opacity', 0.2);
+		.attr('opacity', opacity);
 
 	d3.select('#timeSvg').selectAll('text')
 			.remove()
@@ -189,7 +190,7 @@ function timeFilter () {
 		only900.style('pointer-events', 'all');
 		filtered = 0;//	tutto
 		setTimeScale(range_width, updateTimeline);	
-		flyingTo(city_data_temp, city_coord_temp,filtered);
+		flyingTo(city_data_temp, city_coord_temp, filtered);
 	})
 }
 
