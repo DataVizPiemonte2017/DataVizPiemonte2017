@@ -103,7 +103,7 @@ function msout () {
 function streetClick () {
 	var obj = d3.select(this);
 	var obj = obj._groups[0][0];
-	console.log(obj);
+	var color = obj._path.attributes.stroke.nodeValue;
 
 	var name = obj.feature.properties.wn;
 	var img = obj.feature.properties.img;
@@ -135,6 +135,9 @@ function streetClick () {
 	setTimeout (function () {
 		infoBox.select('#ib-title')
 			.text(name)
+			.style("color", color)
+		infoBox.selectAll('a')
+			.style("color", color)
 		infoBox.select('img')
 			.attr('src', img)
 			.style('display', function () {
