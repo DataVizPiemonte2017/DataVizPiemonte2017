@@ -7,6 +7,8 @@ body, html, #map {
 
 h1, h2 {
     font-weight: bold !important;
+    color: rgb(33, 68, 0);
+    text-shadow: 1px 1px 20px rgb(33, 68, 0);
 }
 
 h1 {
@@ -18,14 +20,18 @@ h2 {
 }
 
 a {
-    color: black !important;
+    color: rgb(33, 68, 0) !important;
     text-decoration: none !important;
 }
 
 a:active, a:hover {
-    color: '#875900' !important;
+/*    color: '#875900' !important;*/    
     font-weight: bold !important;
     text-decoration: underline !important;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 div {
@@ -66,6 +72,13 @@ div {
     border-right: 2px solid;
     border-bottom: 4px solid;
     border-radius: 5px;
+    /*border-color: rgb(35, 139, 69);*/
+    border-color: rgb(33, 68, 0)
+}
+
+button:hover {
+    cursor: default;
+    background-color: rgba(193, 189, 181, 0.7) !important;
 }
 
 #timeline {
@@ -121,6 +134,7 @@ div {
     font-size: 1.5em;
     font-weight: bold;
     text-align: center !important;
+    text-shadow: 1px 1px 1px black;
 }
 
 
@@ -152,6 +166,7 @@ rect {
     text-anchor: middle;
     fill: white;
     font-weight: bold;
+    text-shadow: 1px 1px 20px rgb(33, 68, 0);
 }
 
 #aboutBtn {
@@ -164,13 +179,14 @@ rect {
     border-right: 2px solid;
     border-bottom: 4px solid;
     border-radius: 5px;
+    border-color: rgb(33, 68, 0)
 }
 
 #aboutText {
     position: absolute;
     width: 50%;
-    height: 50%;
-    background-color: rgba(169,169,169,0.75);
+    height: auto;
+    background-color: rgba(220,220,220,0.75);
     z-index: 99999999;
     padding-top: 2em;
     padding-left: 1em;
@@ -180,6 +196,11 @@ rect {
     display: none;
     overflow: auto;
 }
+
+#aboutText strong {
+    color: rgb(33, 68, 0);
+}
+
 
 #aboutBack {
     z-index: 9999999;
@@ -195,6 +216,27 @@ rect {
     cursor: pointer;
     top: 0.25em;
     right: 1em;
+}
+
+#aboutText2{
+    column-count: 2;
+}
+
+#techStack {
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#techStack img {
+    width: 100px;
+    opacity: 0.5;
+}
+
+#techStack img:hover {
+    opacity: 1;
 }
 
 .timelineRect {
@@ -235,3 +277,4 @@ rect {
 #allTime {
 	pointer-events: none;
 }
+
